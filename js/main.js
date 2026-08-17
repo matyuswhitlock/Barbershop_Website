@@ -8,9 +8,44 @@ const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 const ctaBtn = document.getElementById("ctaBtn");
 const callBtn = document.getElementById("callBtn");
-const phoneLink = document.getElementById("phoneLink");
-const headingEl = document.getElementById("heroHeading");
+const phoneLink = document.getElementById("phoneLink"); // we won't be using an actual phone feature
+const heading = document.getElementById("heroHeading");
+const featureGrid = document.getElementById("featureGrid");
 
+// ----- Services Data (Array of Objetcs) -----
+const servives = [
+{
+title: "Classic Haircut",
+text: "Timeless cuts with modern precision tailored to your style.",
+image: "assests/images/feature-1.jpg"    
+},
+{
+ title: "Beard Trim",
+text: "Shape and line-up your beard for a clean, sharp finish.",
+image: "assests/images/feature-2.jpg"     
+},
+{
+ title: "Straight razor Shave",
+text: "Hot towel treatment with a smooth traditional shave.",
+image: "assests/images/feature-3.jpg"     
+}
+];
+
+// ----- Render Features using forEach -----
+const renderFeatures = () => {
+if (!featureGrid) return;
+services.forEach(service => {
+ const card = document.createElement("article"); 
+ card.classList.add ("feature-card");  
+ card.innerHTML = `
+ <img src="$(service.image)" alt="$(servvice.title)" class="feature-img"
+ />
+ <h3 class="feature-title">${service.title}</h3>
+ <p class="feature-text">${service.text}</p>
+ `;
+ featureGrid.appendChild(card);
+});    
+};
 // ----- Helpers / Functions
 // Update footer year automatically
 const setCurrentYear = () => {
