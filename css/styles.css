@@ -15,7 +15,7 @@ File: css/styles.css
 --max-width: 1100px 
 }
 /*---- Base Reset ----*/
-*{
+* {
 box-sizing: border-box;
 margin: 0;
 padding: 0;    
@@ -24,10 +24,10 @@ html {
 scroll-behavior: smooth;    
 }
 body {
-font-family: Arial, Arial, Helvetica, sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 background-color: var(--color-bg-primary);
 color: var(--color-text-dark);
-line-height: 1.6    
+line-height: 1.6;    
 }
 /* ---- Layout Helpers ---- */
 .container {
@@ -44,7 +44,7 @@ top: 0;
 z-index: 10;
 box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
-.header-inner{
+.header-inner {
 display: flex;
 align-items: center;
 justify-content: space-between;
@@ -75,13 +75,13 @@ text-decoration: none;
 font-weight: 600;   
 padding: 8px 10px;
 border-radius: 10px;
-transition: background-color 0,2s ease, color 0,2s ease;
+transition: background-color 0.2s ease, color 0.2s ease;
 }
 .nav-link:hover {
 background-color: rgba(216, 195, 165, 0.12);
 color: var(--color-text-light);
 }
-/* Mobile button hidden on desktop*/
+/* Mobile button hidden on desktop */
 .menu-btn {
 display: none;
 border: 2px solid rgba(255, 255, 255, 0.25);
@@ -109,7 +109,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 background-color: rgba(216, 195, 165, 0.10);   
 color: var(--color-text-light); 
 }
-/*---- Button ----*/
+/* ---- Button ---- */
 .btn {
 display: inline-block;
 text-decoration: none;    
@@ -142,7 +142,7 @@ color: var(--color-text-light);
 border-color: rgba(255, 255, 255, 0.65);  
 }
 .btn-secondary:hover {
-    background-color: rgba(58, 45, 40, 0.08);
+background-color: rgba(58, 45, 40, 0.08);
 }
 .hero .btn-secondary:hover,
 .cta .btn-secondary:hover {
@@ -333,7 +333,7 @@ align-items: center;
 justify-content: center;
 }
 /* When you add JS later, you'll toggle this class */
-.monile-menu.is-open {
+.mobile-menu.is-open {
 display: block;    
 }
 }
